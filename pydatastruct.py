@@ -25,3 +25,15 @@ class LinkedList:
         else:
             self.tail.next = new_node
             self.tail = new_node
+
+    def at(self, i):
+        if i < 0:
+            raise IndexError
+        current_index = 0
+        current_node = self.head
+        while (current_node is not None) and (current_index < i):
+            current_node = current_node.next
+            current_index += 1
+        if current_node is None:
+            raise IndexError
+        return current_node.data

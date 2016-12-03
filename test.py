@@ -5,8 +5,11 @@ print('hello')
 l = LinkedList()
 print(l.length)
 
-l.add(1)
+l.add(10)
 print(l.length)
 
-l.add(2)
+l.add(20)
 print(l.length)
+
+for i in range(l.length):
+    print(l.at(i))
