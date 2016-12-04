@@ -37,3 +37,9 @@ class LinkedList:
         if current_node is None:
             raise IndexError
         return current_node.data
+
+    def index_of(self, data):
+        for i in range(0, self.length):
+            if self.at(i) == data:
+                return i
+        return -1
