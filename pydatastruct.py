@@ -43,3 +43,18 @@ class LinkedList:
             if self.at(i) == data:
                 return i
         return -1
+
+    def __iter__(self):
+        return LinkedListIter(self)
+
+
+class LinkedListIter:
+    def __init__(self, linked_list):
+        self.head = linked_list.head
+
+    def __next__(self):
+        if self.head is None:
+            raise StopIteration
+        data = self.head.data
+        self.head = self.head.next
+        return data

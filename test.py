@@ -20,3 +20,8 @@ print()
 
 print(l.index_of(20))
 print(l.index_of(1))
+
+print()
+
+for i in l:
+    print(i)
